@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop All Products — Voltix</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement">
+    <div class="container">
+      <strong>FREE EXPRESS SHIPPING</strong> on orders over $75 <span>•</span> <a href="shop.html">Shop the latest tech</a>
+    </div>
+  </div>
+
+  <header>
+    <nav class="nav container">
+      <a href="index.html" class="logo"><i class="logo-mark"></i>volt<span>ix</span></a>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-burger" aria-label="Open menu" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </label>
+
+      <div class="nav-links" id="nav-links">
+        <a href="index.html#categories">Categories</a>
+        <a href="shop.html">Shop</a>
+        <a href="#deals" class="sale">Flash deals</a>
+        <a href="index.html#brands">Brands</a>
+      </div>
+      <div class="search">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4 4"></path></svg>
+        Search products...
+      </div>
+      <div class="nav-actions">
+        <a class="icon-btn" aria-label="Account" href="login.html">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"></circle><path d="M4.5 20c.7-4 3.2-6 7.5-6s6.8 2 7.5 6"></path></svg>
+        </a>
+        <a class="icon-btn" aria-label="Shopping cart" href="cart.html">
+          <svg viewBox="0 0 24 24"><path d="M3 4h2l2.1 11.1a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 1.9-1.4L19 8H6"></path><circle cx="9" cy="20" r="1"></circle><circle cx="17" cy="20" r="1"></circle></svg>
+          <span class="count">2</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="page-banner">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a><span>/</span>Shop</div>
+      <h1>All Products</h1>
+    </div>
+  </div>
+
+  <main>
+    <div class="container shop-layout">
+      <input type="checkbox" id="filters-toggle" class="filters-toggle-input">
+      <label for="filters-toggle" class="filters-toggle-btn">
+        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="M4 6h16M7 12h10M10 18h4"></path></svg>
+        Filters
+      </label>
+      <aside class="filters">
+        <h4>Filters</h4>
+        <div class="filter-group">
+          <div class="f-title">Category</div>
+          <div class="filter-option"><input type="checkbox" id="c1" checked><label for="c1">Smartphones</label><small>48</small></div>
+          <div class="filter-option"><input type="checkbox" id="c2" checked><label for="c2">Audio</label><small>86</small></div>
+          <div class="filter-option"><input type="checkbox" id="c3"><label for="c3">Gaming</label><small>73</small></div>
+          <div class="filter-option"><input type="checkbox" id="c4"><label for="c4">Computers</label><small>54</small></div>
+          <div class="filter-option"><input type="checkbox" id="c5"><label for="c5">Wearables</label><small>31</small></div>
+          <div class="filter-option"><input type="checkbox" id="c6"><label for="c6">Accessories</label><small>112</small></div>
+        </div>
+        <div class="filter-group">
+          <div class="f-title">Price range</div>
+          <div class="price-inputs">
+            <input type="number" placeholder="Min" aria-label="Minimum price">
+            <span>—</span>
+            <input type="number" placeholder="Max" aria-label="Maximum price">
+          </div>
+        </div>
+        <div class="filter-group">
+          <div class="f-title">Brand</div>
+          <div class="filter-option"><input type="checkbox" id="b1"><label for="b1">Apple</label></div>
+          <div class="filter-option"><input type="checkbox" id="b2"><label for="b2">Samsung</label></div>
+          <div class="filter-option"><input type="checkbox" id="b3"><label for="b3">Sony</label></div>
+          <div class="filter-option"><input type="checkbox" id="b4"><label for="b4">Keychron</label></div>
+        </div>
+        <div class="filter-group">
+          <div class="f-title">Rating</div>
+          <div class="filter-option"><input type="checkbox" id="r1"><label for="r1">★★★★★ &amp; up</label></div>
+          <div class="filter-option"><input type="checkbox" id="r2"><label for="r2">★★★★☆ &amp; up</label></div>
+        </div>
+        <button class="button" type="button" style="width:100%;">Apply filters</button>
+      </aside>
+
+      <div>
+        <div class="shop-toolbar">
+          <span>Showing all 6 products</span>
+          <select aria-label="Sort products">
+            <option>Sort: Featured</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+            <option>Newest first</option>
+            <option>Top rated</option>
+          </select>
+        </div>
+
+        <!-- ============================================================
+             PRODUCT DATA START — hardcoded per syllabus scope for now.
+             Kept short on purpose: only the products that actually
+             have their own detail page below are listed here, and
+             each card links to that specific page (product-<slug>.html)
+             instead of every card pointing at one shared product.html.
+             ============================================================ -->
+        <div class="shop-products">
+
+          <article class="product">
+            <div class="product-media"><span class="badge">NEW</span><span class="wish">♡</span>
+              <a href="product-galaxy-s24-ultra.html"><img src="images/5.png" alt="Galaxy S24 Ultra"></a>
+            </div>
+            <div class="product-info"><div class="rating">★★★★★ <em>(124)</em></div>
+              <h3><a href="product-galaxy-s24-ultra.html">Galaxy S24 Ultra 256GB Titanium</a></h3>
+              <div class="price-row"><div class="price">$1,099</div><button class="cart-add" aria-label="Add to cart">+</button></div>
+            </div>
+          </article>
+
+          <article class="product">
+            <div class="product-media"><span class="badge hot">-20%</span><span class="wish">♡</span>
+              <a href="product-sony-wh1000xm5.html"><img src="images/6.png" alt="Sony WH-1000XM5"></a>
+            </div>
+            <div class="product-info"><div class="rating">★★★★★ <em>(389)</em></div>
+              <h3><a href="product-sony-wh1000xm5.html">Sony WH-1000XM5 Wireless Headphones</a></h3>
+              <div class="price-row"><div class="price">$319 <span class="old-price">$399</span></div><button class="cart-add" aria-label="Add to cart">+</button></div>
+            </div>
+          </article>
+
+          <article class="product">
+            <div class="product-media"><span class="badge">BESTSELLER</span><span class="wish">♡</span>
+              <a href="product-apple-watch-s9.html"><img src="images/7.png" alt="Apple Watch Series 9"></a>
+            </div>
+            <div class="product-info"><div class="rating">★★★★★ <em>(210)</em></div>
+              <h3><a href="product-apple-watch-s9.html">Apple Watch Series 9 GPS 45mm</a></h3>
+              <div class="price-row"><div class="price">$429</div><button class="cart-add" aria-label="Add to cart">+</button></div>
+            </div>
+          </article>
+
+          <article class="product">
+            <div class="product-media"><span class="badge hot">-15%</span><span class="wish">♡</span>
+              <a href="product-keychron-q1-pro.html"><img src="images/8.png" alt="Keychron Q1 Pro keyboard"></a>
+            </div>
+            <div class="product-info"><div class="rating">★★★★☆ <em>(86)</em></div>
+              <h3><a href="product-keychron-q1-pro.html">Keychron Q1 Pro Mechanical Keyboard</a></h3>
+              <div class="price-row"><div class="price">$169 <span class="old-price">$199</span></div><button class="cart-add" aria-label="Add to cart">+</button></div>
+            </div>
+          </article>
+
+          <article class="product">
+            <div class="product-media"><span class="badge">NEW</span><span class="wish">♡</span>
+              <a href="product-macbook-air-m3.html"><img src="images/10.png" alt="MacBook Air M3"></a>
+            </div>
+            <div class="product-info"><div class="rating">★★★★★ <em>(302)</em></div>
+              <h3><a href="product-macbook-air-m3.html">MacBook Air 13" M3 8GB/256GB</a></h3>
+              <div class="price-row"><div class="price">$1,099</div><button class="cart-add" aria-label="Add to cart">+</button></div>
+            </div>
+          </article>
+
+          <article class="product">
+            <div class="product-media"><span class="badge hot">-10%</span><span class="wish">♡</span>
+              <a href="product-ipad-pro-11.html"><img src="images/13.png" alt="iPad Pro 11 inch"></a>
+            </div>
+            <div class="product-info"><div class="rating">★★★★★ <em>(176)</em></div>
+              <h3><a href="product-ipad-pro-11.html">iPad Pro 11" M4 128GB Wi-Fi</a></h3>
+              <div class="price-row"><div class="price">$899 <span class="old-price">$999</span></div><button class="cart-add" aria-label="Add to cart">+</button></div>
+            </div>
+          </article>
+
+        </div>
+        <!-- PRODUCT DATA END -->
+
+        <nav class="pagination" aria-label="Product pages">
+          <a href="#" class="active">1</a>
+        </nav>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="logo"><i class="logo-mark"></i>volt<span>ix</span></a>
+          <p class="footer-about">The destination for people who live for great technology. Better gear, better every day.</p>
+          <div class="socials"><a href="#" class="social">f</a><a href="#" class="social">𝕏</a><a href="#" class="social">ig</a><a href="#" class="social">in</a></div>
+        </div>
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <a href="shop.html">Smartphones</a><a href="shop.html">Laptops &amp; Tablets</a><a href="shop.html">Audio</a><a href="shop.html">Gaming</a><a href="shop.html">Smart Home</a>
+        </div>
+        <div class="footer-col">
+          <h4>Help</h4>
+          <a href="#">Contact us</a><a href="#">Shipping &amp; Delivery</a><a href="#">Returns &amp; Refunds</a><a href="#">Track your order</a><a href="#">FAQs</a>
+        </div>
+        <div class="footer-col">
+          <h4>About Voltix</h4>
+          <a href="#">Our story</a><a href="#">Careers</a><a href="#">Stores</a><a href="#">Terms &amp; Conditions</a><a href="#">Privacy policy</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Voltix Electronics. All rights reserved.</span>
+        <div class="payments"><span class="pay">VISA</span><span class="pay">mastercard</span><span class="pay">PayPal</span><span class="pay"> Pay</span></div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

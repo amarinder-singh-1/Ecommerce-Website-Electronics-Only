@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart — Voltix</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement">
+    <div class="container">
+      <strong>FREE EXPRESS SHIPPING</strong> on orders over $75 <span>•</span> <a href="shop.html">Shop the latest tech</a>
+    </div>
+  </div>
+
+  <header>
+    <nav class="nav container">
+      <a href="index.html" class="logo"><i class="logo-mark"></i>volt<span>ix</span></a>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-burger" aria-label="Open menu" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </label>
+
+      <div class="nav-links" id="nav-links">
+        <a href="index.html#categories">Categories</a>
+        <a href="shop.html">Shop</a>
+        <a href="#deals" class="sale">Flash deals</a>
+        <a href="index.html#brands">Brands</a>
+      </div>
+      <div class="search">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4 4"></path></svg>
+        Search products...
+      </div>
+      <div class="nav-actions">
+        <a class="icon-btn" aria-label="Account" href="login.html">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"></circle><path d="M4.5 20c.7-4 3.2-6 7.5-6s6.8 2 7.5 6"></path></svg>
+        </a>
+        <a class="icon-btn" aria-label="Shopping cart" href="cart.html">
+          <svg viewBox="0 0 24 24"><path d="M3 4h2l2.1 11.1a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 1.9-1.4L19 8H6"></path><circle cx="9" cy="20" r="1"></circle><circle cx="17" cy="20" r="1"></circle></svg>
+          <span class="count">2</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="page-banner">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a><span>/</span>Cart</div>
+      <h1>Your Cart</h1>
+    </div>
+  </div>
+
+  <main>
+    <div class="container cart-layout">
+      <!-- ============================================================
+           CART DATA — hardcoded per syllabus scope for now.
+           Later, this table becomes a loop over the logged-in user's
+           cart items from the backend.
+           ============================================================ -->
+      <table class="cart-table">
+        <thead>
+          <tr><th>Product</th><th>Price</th><th>Quantity</th><th>Subtotal</th><th></th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="cart-item">
+                <a href="product-sony-wh1000xm5.html"><img src="images/6.png"></a>
+                <div><b><a href="product-sony-wh1000xm5.html">Sony WH-1000XM5 Wireless Headphones</a></b><small>Color: Midnight Black</small></div>
+              </div>
+            </td>
+            <td>$319</td>
+            <td>
+              <div class="cart-qty">
+                <button type="button" aria-label="Decrease quantity">−</button>
+                <input type="text" value="1" aria-label="Quantity">
+                <button type="button" aria-label="Increase quantity">+</button>
+              </div>
+            </td>
+            <td>$319</td>
+            <td><a href="cart.html" class="remove-link">Remove</a></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="cart-item">
+                <a href="product-galaxy-s24-ultra.html"><img src="images/5.png" alt="Galaxy S24 Ultra"></a>
+                <div><b><a href="product-galaxy-s24-ultra.html">Galaxy S24 Ultra 256GB Titanium</a></b><small>Color: Titanium Gray</small></div>
+              </div>
+            </td>
+            <td>$1,099</td>
+            <td>
+              <div class="cart-qty">
+                <button type="button" aria-label="Decrease quantity">−</button>
+                <input type="text" value="1" aria-label="Quantity">
+                <button type="button" aria-label="Increase quantity">+</button>
+              </div>
+            </td>
+            <td>$1,099</td>
+            <td><a href="cart.html" class="remove-link">Remove</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- END CART DATA -->
+
+      <aside class="cart-summary">
+        <h3>Order summary</h3>
+        <div class="summary-row"><span>Subtotal</span><span>$1,418</span></div>
+        <div class="summary-row"><span>Shipping</span><span>Free</span></div>
+        <div class="summary-row"><span>Tax (estimated)</span><span>$85.08</span></div>
+        <div class="promo-row">
+          <input type="text" placeholder="Promo code" aria-label="Promo code">
+          <button type="button">Apply</button>
+        </div>
+        <div class="summary-row total"><span>Total</span><span>$1,503.08</span></div>
+        <button class="btn-primary" type="button">Proceed to checkout</button>
+        <p class="empty-cart-note">Free returns within 30 days on all orders.</p>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="logo"><i class="logo-mark"></i>volt<span>ix</span></a>
+          <p class="footer-about">The destination for people who live for great technology. Better gear, better every day.</p>
+          <div class="socials"><a href="#" class="social">f</a><a href="#" class="social">𝕏</a><a href="#" class="social">ig</a><a href="#" class="social">in</a></div>
+        </div>
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <a href="shop.html">Smartphones</a><a href="shop.html">Laptops &amp; Tablets</a><a href="shop.html">Audio</a><a href="shop.html">Gaming</a><a href="shop.html">Smart Home</a>
+        </div>
+        <div class="footer-col">
+          <h4>Help</h4>
+          <a href="#">Contact us</a><a href="#">Shipping &amp; Delivery</a><a href="#">Returns &amp; Refunds</a><a href="#">Track your order</a><a href="#">FAQs</a>
+        </div>
+        <div class="footer-col">
+          <h4>About Voltix</h4>
+          <a href="#">Our story</a><a href="#">Careers</a><a href="#">Stores</a><a href="#">Terms &amp; Conditions</a><a href="#">Privacy policy</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Voltix Electronics. All rights reserved.</span>
+        <div class="payments"><span class="pay">VISA</span><span class="pay">mastercard</span><span class="pay">PayPal</span><span class="pay"> Pay</span></div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

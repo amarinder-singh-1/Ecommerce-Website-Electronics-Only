@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up — Voltix</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement">
+    <div class="container">
+      <strong>FREE EXPRESS SHIPPING</strong> on orders over $75 <span>•</span> <a href="shop.html">Shop the latest tech</a>
+    </div>
+  </div>
+
+  <header>
+    <nav class="nav container">
+      <a href="index.html" class="logo"><i class="logo-mark"></i>volt<span>ix</span></a>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-burger" aria-label="Open menu" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </label>
+
+      <div class="nav-links" id="nav-links">
+        <a href="index.html#categories">Categories</a>
+        <a href="shop.html">Shop</a>
+        <a href="#deals" class="sale">Flash deals</a>
+        <a href="index.html#brands">Brands</a>
+      </div>
+      <div class="search">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4 4"></path></svg>
+        Search products...
+      </div>
+      <div class="nav-actions">
+        <a class="icon-btn" aria-label="Account" href="login.html">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"></circle><path d="M4.5 20c.7-4 3.2-6 7.5-6s6.8 2 7.5 6"></path></svg>
+        </a>
+        <a class="icon-btn" aria-label="Shopping cart" href="cart.html">
+          <svg viewBox="0 0 24 24"><path d="M3 4h2l2.1 11.1a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 1.9-1.4L19 8H6"></path><circle cx="9" cy="20" r="1"></circle><circle cx="17" cy="20" r="1"></circle></svg>
+          <span class="count">2</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="auth-wrap">
+      <div class="auth-visual">
+        <a href="index.html" class="logo"><i class="logo-mark"></i>volt<span>ix</span></a>
+        <div class="eyebrow" style="color:#9ff4dc;">Join Voltix</div>
+        <h2>Create an account and shop smarter.</h2>
+        <p>Get personalized recommendations, faster checkout, and first access to every drop.</p>
+        <ul class="auth-perks">
+          <li>Free express shipping on your first order</li>
+          <li>Exclusive member-only deals</li>
+          <li>One-click reorder on past purchases</li>
+        </ul>
+      </div>
+
+      <div class="auth-form-side">
+        <div class="auth-box">
+          <div class="eyebrow">Account</div>
+
+          <input type="radio" name="authTab" id="auth-tab-signup" class="auth-tab-input" checked>
+          <input type="radio" name="authTab" id="auth-tab-login" class="auth-tab-input">
+          <div class="auth-toggle">
+            <label for="auth-tab-signup">Sign up</label>
+            <label for="auth-tab-login">Log in</label>
+          </div>
+
+          <div class="auth-panels">
+            <div class="auth-panel" id="panel-signup">
+              <h1>Create your account</h1>
+              <p class="auth-sub">It only takes a minute.</p>
+
+              <!--
+                No backend yet (syllabus scope = HTML/CSS only), so this
+                form cannot create a real account right now. The markup,
+                field names, and validation are built so a PHP/MySQL
+                handler can be dropped in later just by pointing "action"
+                at it — no markup changes needed.
+              -->
+              <form action="process-signup.php" method="post">
+                <div class="field-row">
+                  <div class="field">
+                    <label for="firstName">First name</label>
+                    <input type="text" id="firstName" name="first_name" placeholder="Arnav" required>
+                  </div>
+                  <div class="field">
+                    <label for="lastName">Last name</label>
+                    <input type="text" id="lastName" name="last_name" placeholder="Sharma" required>
+                  </div>
+                </div>
+                <div class="field">
+                  <label for="signupEmail">Email address</label>
+                  <input type="email" id="signupEmail" name="email" placeholder="you@example.com" required>
+                </div>
+                <div class="field">
+                  <label for="signupPassword">Password</label>
+                  <input type="password" id="signupPassword" name="password" placeholder="At least 8 characters" minlength="8" required>
+                  <div class="field-hint">Use 8+ characters with a mix of letters and numbers.</div>
+                </div>
+                <div class="field">
+                  <label for="confirmPassword">Confirm password</label>
+                  <input type="password" id="confirmPassword" name="confirm_password" placeholder="Re-enter your password" minlength="8" required>
+                </div>
+                <div class="check-row">
+                  <span class="check-option"><input type="checkbox" id="newsletter" name="newsletter"><label for="newsletter">Send me deals and updates</label></span>
+                </div>
+                <button class="auth-submit" type="submit">Create account</button>
+              </form>
+
+              <p class="auth-switch">Already have an account? <label for="auth-tab-login">Log in</label></p>
+              <p class="terms-note">By creating an account, you agree to Voltix's Terms &amp; Conditions and Privacy Policy.</p>
+            </div>
+
+            <div class="auth-panel" id="panel-login">
+              <h1>Log in to Voltix</h1>
+              <p class="auth-sub">Enter your details to access your account.</p>
+
+              <!--
+                No backend yet (syllabus scope = HTML/CSS only), so this
+                form cannot authenticate a real user right now. The markup,
+                names, and validation are built so a PHP/MySQL handler can
+                be dropped in later just by pointing "action" at it.
+              -->
+              <form action="process-login.php" method="post">
+                <div class="field">
+                  <label for="loginEmail">Email address</label>
+                  <input type="email" id="loginEmail" name="email" placeholder="you@example.com" required>
+                </div>
+                <div class="field">
+                  <label for="loginPassword">Password</label>
+                  <input type="password" id="loginPassword" name="password" placeholder="Enter your password" minlength="8" required>
+                </div>
+                <div class="check-row">
+                  <span class="check-option"><input type="checkbox" id="remember" name="remember"><label for="remember">Remember me</label></span>
+                  <a href="#" class="forgot-link">Forgot password?</a>
+                </div>
+                <button class="auth-submit" type="submit">Log in</button>
+              </form>
+
+              <p class="auth-switch">Don't have an account? <label for="auth-tab-signup">Sign up</label></p>
+            </div>
+          </div>
+
+          <div class="auth-divider">or continue with</div>
+          <div class="social-auth">
+            <button type="button">Google</button>
+            <button type="button">Apple</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="logo"><i class="logo-mark"></i>volt<span>ix</span></a>
+          <p class="footer-about">The destination for people who live for great technology. Better gear, better every day.</p>
+          <div class="socials"><a href="#" class="social">f</a><a href="#" class="social">𝕏</a><a href="#" class="social">ig</a><a href="#" class="social">in</a></div>
+        </div>
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <a href="shop.html">Smartphones</a><a href="shop.html">Laptops &amp; Tablets</a><a href="shop.html">Audio</a><a href="shop.html">Gaming</a><a href="shop.html">Smart Home</a>
+        </div>
+        <div class="footer-col">
+          <h4>Help</h4>
+          <a href="#">Contact us</a><a href="#">Shipping &amp; Delivery</a><a href="#">Returns &amp; Refunds</a><a href="#">Track your order</a><a href="#">FAQs</a>
+        </div>
+        <div class="footer-col">
+          <h4>About Voltix</h4>
+          <a href="#">Our story</a><a href="#">Careers</a><a href="#">Stores</a><a href="#">Terms &amp; Conditions</a><a href="#">Privacy policy</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Voltix Electronics. All rights reserved.</span>
+        <div class="payments"><span class="pay">VISA</span><span class="pay">mastercard</span><span class="pay">PayPal</span><span class="pay"> Pay</span></div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
