@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product — Voltix</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="products.js"></script>
+  <script src="script.js"></script>
+  <script src="chatbot.js"></script>
+</head>
+<body data-page="product">
+  <div class="page-banner">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><a href="shop.html">Shop</a><span>/</span><span id="bc-cat" style="margin:0;color:inherit"></span><span>/</span><span id="bc-current" style="margin:0;color:inherit">Loading…</span></div>
+    </div>
+  </div>
+
+  <!-- ONE template for every product. Open it as product.html?id=<product id>;
+       app.js fetches that product from the API and fills this container. -->
+  <main>
+    <div id="product-root"></div>
+  </main>
+</body>
+</html>

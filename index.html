@@ -1,0 +1,124 @@
+1<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voltix — Future Electronics</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="products.js"></script>
+  <script src="script.js"></script>
+  <script src="chatbot.js"></script>
+</head>
+<body data-page="home">
+  <div id="site-loader" aria-label="Loading Voltix">
+    <div class="loader-content">
+      <div class="loader-logo">⚡</div>
+      <div class="loader-brand">volt<span>ix</span></div>
+      <div class="loader-text">Loading your experience</div>
+      <div class="loader-progress"><span></span></div>
+    </div>
+  </div>
+
+  <!-- Announcement bar, header/nav, footer, toast and chatbot are injected by app.js -->
+
+  <main>
+    <div class="container hero">
+      <section class="hero-card">
+        <div class="hero-pills"><span>New Generation</span><span>Free delivery</span></div>
+        <div class="hero-copy">
+          <div class="eyebrow">Sound reimagined</div>
+          <h1>Feel every<br>beat, deeply.</h1>
+          <p>Discover extraordinary sound with the all-new AirPods Max. Immersive audio, elevated design, made for your world.</p>
+          <a class="button" href="shop.html?cat=audio">Explore collection <span class="arrow">→</span></a>
+        </div>
+        <img class="hero-product" src="images/15.png" alt="Premium headphones" style="width: 27%; height: auto;">
+      </section>
+
+      <div class="trust-row">
+        <div class="trust"><div class="trust-icon">⚡</div><div><b>Fast delivery</b><small>Same day dispatch</small></div></div>
+        <div class="trust"><div class="trust-icon">↻</div><div><b>Easy returns</b><small>7 days to decide</small></div></div>
+        <div class="trust"><div class="trust-icon">⌘</div><div><b>Secure payment</b><small>UPI, cards &amp; COD</small></div></div>
+        <div class="trust"><div class="trust-icon">♡</div><div><b>Expert support</b><small>Chat with Volt 24/7</small></div></div>
+      </div>
+    </div>
+
+    <section id="categories" class="container">
+      <div class="section-top">
+        <div><div class="section-label">Find your gear</div><h2>Shop by category</h2></div>
+        <a class="view-all" href="shop.html">View all categories →</a>
+      </div>
+      <div class="categories">
+        <a href="shop.html?cat=smartphones" data-cat="smartphones" class="category"><b>Smartphones</b><small>products</small><img src="images/4.png" alt="Smartphone"></a>
+        <a href="shop.html?cat=audio" data-cat="audio" class="category"><b>Audio</b><small>products</small><img src="images/2.png" alt="Headphones"></a>
+        <a href="shop.html?cat=gaming" data-cat="gaming" class="category"><b>Gaming</b><small>products</small><img src="images/9.png" alt="Gaming controller"></a>
+        <a href="shop.html?cat=computers" data-cat="computers" class="category"><b>Computers</b><small>products</small><img src="images/1.png" alt="Laptop"></a>
+        <a href="shop.html?cat=wearables" data-cat="wearables" class="category"><b>Wearables</b><small>products</small><img src="images/7.png" alt="Smartwatch"></a>
+        <a href="shop.html?cat=accessories" data-cat="accessories" class="category"><b>Accessories</b><small>products</small><img src="images/3.png" alt="Tech accessories"></a>
+      </div>
+    </section>
+
+    <section id="deals" class="container">
+      <div class="deal-banner">
+        <div class="eyebrow">Ends tonight at midnight</div>
+        <h2>Flash deals.<br>Serious savings.</h2>
+        <p>Save up to 40% on selected premium electronics.</p>
+        <div class="timer" aria-label="Time left">
+          <div class="time"><b>00</b><span>Hours</span></div>
+          <div class="time"><b>00</b><span>Mins</span></div>
+          <div class="time"><b>00</b><span>Secs</span></div>
+        </div>
+        <a class="button" href="shop.html?deals=1" style="margin-top:22px;">Shop the deals <span class="arrow">→</span></a>
+        <img class="deal-image" src="images/4.png" alt="Smartphone on sale">
+      </div>
+    </section>
+
+    <!-- Trending products are loaded live from the product APIs by app.js -->
+    <section id="products" class="container">
+      <div class="section-top">
+        <div><div class="section-label">Curated for you</div><h2>Trending right now</h2></div>
+        <a class="view-all" href="shop.html">Shop all products →</a>
+      </div>
+      <div class="products" id="trending-grid"></div>
+    </section>
+
+    <section id="brands" class="container">
+      <div class="feature-grid">
+        <article class="feature-main">
+          <div class="eyebrow">Next-level gaming</div>
+          <h2>Everything you need to play without limits.</h2>
+          <p>Build your ultimate setup with our handpicked gaming essentials.</p>
+          <a class="button" href="shop.html?cat=gaming">Shop gaming <span class="arrow">→</span></a>
+          <img src="images/9.png" alt="Gaming headphones">
+        </article>
+        <div class="feature-side">
+          <article class="side-card">
+            <h3>Elevate your desk</h3>
+            <p>Modern tech for your workspace.</p>
+            <a href="shop.html?cat=computers">Shop workspaces →</a>
+            <img src="images/8.png" alt="Desk keyboard">
+          </article>
+          <article class="side-card">
+            <h3>Gear up your everyday</h3>
+            <p>Chargers, cables and handy accessories.</p>
+            <a href="shop.html?cat=accessories">Shop accessories →</a>
+            <img src="images/3.png" alt="Tech accessories">
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="newsletter-wrap">
+      <div class="container newsletter">
+        <div>
+          <h2>Tech drops, straight to your inbox.</h2>
+          <p>Be first to know about new arrivals, exclusive offers and more.</p>
+        </div>
+        <form class="email-form" action="#" method="get">
+          <input type="email" aria-label="Your email address" placeholder="Enter your email address" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

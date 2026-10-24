@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log In — Voltix</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="products.js"></script>
+  <script src="script.js"></script>
+  <script src="chatbot.js"></script>
+</head>
+<body data-page="auth">
+  <main>
+    <div class="auth-wrap">
+      <div class="auth-visual">
+        <a href="index.html" class="logo"><i class="logo-mark"></i>volt<span>ix</span></a>
+        <div class="eyebrow" style="color:#9ff4dc;">Welcome back</div>
+        <h2>Pick up right where you left off.</h2>
+        <p>Log in to track orders, manage your wishlist and check out faster next time.</p>
+        <ul class="auth-perks">
+          <li>Order tracking in one place</li>
+          <li>Saved addresses &amp; payment details</li>
+          <li>Early access to flash deals</li>
+        </ul>
+      </div>
+
+      <div class="auth-form-side">
+        <div class="auth-box">
+          <div class="eyebrow">Account</div>
+
+          <input type="radio" name="authTab" id="auth-tab-signup" class="auth-tab-input">
+          <input type="radio" name="authTab" id="auth-tab-login" class="auth-tab-input" checked>
+          <div class="auth-toggle">
+            <label for="auth-tab-signup">Sign up</label>
+            <label for="auth-tab-login">Log in</label>
+          </div>
+
+          <div class="auth-panels">
+            <div class="auth-panel" id="panel-signup">
+              <h1>Create your account</h1>
+              <p class="auth-sub">It only takes a minute.</p>
+              <form id="signup-form" action="#" method="post">
+                <div class="field-row">
+                  <div class="field">
+                    <label for="firstName">First name</label>
+                    <input type="text" id="firstName" name="first_name" placeholder="Arnav" autocomplete="given-name" required>
+                  </div>
+                  <div class="field">
+                    <label for="lastName">Last name</label>
+                    <input type="text" id="lastName" name="last_name" placeholder="Sharma" autocomplete="family-name" required>
+                  </div>
+                </div>
+                <div class="field">
+                  <label for="signupEmail">Email address</label>
+                  <input type="email" id="signupEmail" name="email" placeholder="you@example.com" autocomplete="email" required>
+                </div>
+                <div class="field">
+                  <label for="signupPassword">Password</label>
+                  <input type="password" id="signupPassword" name="password" placeholder="At least 8 characters" minlength="8" autocomplete="new-password" required>
+                  <div class="field-hint">Use 8+ characters with a mix of letters and numbers.</div>
+                </div>
+                <div class="field">
+                  <label for="confirmPassword">Confirm password</label>
+                  <input type="password" id="confirmPassword" name="confirm_password" placeholder="Re-enter your password" minlength="8" autocomplete="new-password" required>
+                </div>
+                <div class="check-row">
+                  <span class="check-option"><input type="checkbox" id="newsletter" name="newsletter"><label for="newsletter">Send me deals and updates</label></span>
+                </div>
+                <div class="form-msg" role="alert"></div>
+                <button class="auth-submit" type="submit">Create account</button>
+              </form>
+              <p class="auth-switch">Already have an account? <label for="auth-tab-login">Log in</label></p>
+              <p class="terms-note">By creating an account, you agree to Voltix's Terms &amp; Conditions and Privacy Policy.</p>
+            </div>
+
+            <div class="auth-panel" id="panel-login">
+              <h1>Log in to Voltix</h1>
+              <p class="auth-sub">Enter your details to access your account.</p>
+              <form id="login-form" action="#" method="post">
+                <div class="field">
+                  <label for="loginEmail">Email address</label>
+                  <input type="email" id="loginEmail" name="email" placeholder="you@example.com" autocomplete="email" required>
+                </div>
+                <div class="field">
+                  <label for="loginPassword">Password</label>
+                  <input type="password" id="loginPassword" name="password" placeholder="Enter your password" minlength="8" autocomplete="current-password" required>
+                </div>
+                <div class="check-row">
+                  <span class="check-option"><input type="checkbox" id="remember" name="remember"><label for="remember">Remember me</label></span>
+                  <a href="#" class="forgot-link">Forgot password?</a>
+                </div>
+                <div class="form-msg" role="alert"></div>
+                <button class="auth-submit" type="submit">Log in</button>
+              </form>
+              <p class="auth-switch">Don't have an account? <label for="auth-tab-signup">Sign up</label></p>
+            </div>
+          </div>
+
+          <div class="auth-divider">or continue with</div>
+          <div class="social-auth">
+            <button type="button">Google</button>
+            <button type="button">Apple</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
